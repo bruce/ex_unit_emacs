@@ -5,7 +5,15 @@ defmodule ExUnitEmacs.Mixfile do
     [app: :ex_unit_emacs,
      version: "0.0.1",
      elixir: "~> 0.15.1",
+     package: package,
      deps: deps]
+  end
+
+  def package do
+    [description: "Emacs integration for ExUnit",
+     licenses: ["MIT"],
+     contributors: ["bruce"]
+    ]
   end
 
   # Configuration for the OTP application
