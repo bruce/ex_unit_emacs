@@ -15,7 +15,7 @@ defmodule ExUnitEmacs.Formatter do
     {:ok, %{config | client: find_client(config.client)}}
   end
 
-  def handle_event({:suite_finished, run_us, load_us}, config) do
+  def handle_event({:suite_finished, _run_us, _load_us}, config) do
     case config.failure_counter > 0 do
       true -> notify(config, :failure)
       false -> notify(config, :success)
@@ -26,11 +26,11 @@ defmodule ExUnitEmacs.Formatter do
     {:ok, config}
   end
 
-  def handle_event({:case_finished, %ExUnit.TestCase{state: {:failed, failed}} = test_case}, config) do
+  def handle_event({:case_finished, %ExUnit.TestCase{state: {:failed, _failed}}}, config) do
     {:ok, %{config | failure_counter: config.failure_counter + 1}}
   end
 
-  def handle_event({:test_finished, %ExUnit.Test{state: {:failed, failed}} = test}, config) do
+  def handle_event({:test_finished, %ExUnit.Test{state: {:failed, _failed}}}, config) do
     {:ok, %{config | failure_counter: config.failure_counter + 1}}
   end
 

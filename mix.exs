@@ -3,7 +3,7 @@ defmodule ExUnitEmacs.Mixfile do
 
   def project do
     [app: :ex_unit_emacs,
-     version: "0.0.1",
+     version: "0.1.0",
      elixir: "~> 0.15.1",
      package: package,
      deps: deps]
