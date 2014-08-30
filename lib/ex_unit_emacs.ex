@@ -1,0 +1,2 @@
+defmodule ExUnitEmacs do
+end
