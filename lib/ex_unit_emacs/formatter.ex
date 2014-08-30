@@ -12,7 +12,7 @@ defmodule ExUnitEmacs.Formatter do
     # ExUnit doesn't gracefully handle {:error, reason}, so if we can't find a client
     # we just note it for later. (We don't want to prevent test runs on mixed teams where
     # some members don't use Emacs.
-    {:ok, %{config: client: find_client(config.client)}}
+    {:ok, %{config | client: find_client(config.client)}}
   end
 
   def handle_event({:suite_finished, run_us, load_us}, config) do
