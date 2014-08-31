@@ -12,8 +12,8 @@ defmodule ExUnitEmacs.Mixfile do
   def package do
     [description: "Emacs integration for ExUnit",
      licenses: ["MIT"],
-     contributors: ["bruce"]
-    ]
+     contributors: ["bruce"],
+     links: %{"GitHub" => "https://github.com/bruce/ex_unit_emacs"}]
   end
 
   # Configuration for the OTP application
