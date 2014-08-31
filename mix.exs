@@ -3,7 +3,7 @@ defmodule ExUnitEmacs.Mixfile do
 
   def project do
     [app: :ex_unit_emacs,
-     version: "0.1.0",
+     version: "0.1.1",
      elixir: "~> 0.15.1",
      package: package,
      deps: deps]
@@ -12,7 +12,7 @@ defmodule ExUnitEmacs.Mixfile do
   def package do
     [description: "Emacs integration for ExUnit",
      licenses: ["MIT"],
-     contributors: ["bruce"],
+     contributors: ["Bruce Williams"],
      links: %{"GitHub" => "https://github.com/bruce/ex_unit_emacs"}]
   end
 
@@ -20,7 +20,7 @@ defmodule ExUnitEmacs.Mixfile do
   #
   # Type `mix help compile.app` for more information
   def application do
-    [applications: [:logger]]
+    []
   end
 
   # Dependencies can be Hex packages:
