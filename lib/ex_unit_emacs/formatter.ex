@@ -44,7 +44,7 @@ defmodule ExUnitEmacs.Formatter do
 
   defp notify(config, [bg, fg]) do
     if config.client do
-      System.cmd(config.client, ["--eval", "(set-face-attribute 'mode-line nil :background \"#{bg}\" :foreground \"#{fg}\")"])
+      os.cmd(~s{#{config.client} --eval "(set-face-attribute 'mode-line nil :background \\"#{bg}\\" :foreground \\"#{fg}\\")" 2&>1 /dev/null} |> String.to_char_list)
     end
   end
 
