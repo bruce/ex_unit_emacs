@@ -3,6 +3,11 @@ ExUnitEmacs
 
 ExUnit + Emacs integration.
 
+### Emacs Setup
+
+You must be running the Emacs server for this to be able to drive the editor. To
+start the server, type `M-x server-start` in Emacs.
+
 ## Formatter
 
 Currently the only thing this offers is a simple integration that will
